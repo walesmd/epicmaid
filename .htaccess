@@ -1,0 +1,4 @@
+# Redirect www urls to non-www
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.epicmaid\.com [NC]
+RewriteRule (.*) http://epicmaid.com/$1 [R=301,L]
