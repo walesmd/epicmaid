@@ -43,17 +43,19 @@
                     will start booking soon and will <em>go fast!</em> If I can get in touch with you, I'll make sure you're sent a 
                     message the instant I start scheduling.</p>
 
-                    <form class="form-inline">
+                    <?php echo form_open('promos/coming-soon') . PHP_EOL; ?>
                         <div class="input-prepend">
                             <span class="add-on"><i class="icon-user"></i></span>
-                            <input type="text" id="name" class="input" placeholder="Your name" name="name" required />
+                            <input type="text" id="name" class="input-medium" placeholder="Your name" name="name" required />
                         </div>
                         <div class="input-prepend">
                             <span class="add-on"><i class="icon-envelope"></i></span>
-                            <input type="email" id="email_address" class="input" placeholder="Your email address" name="email_address" required />
+                            <input type="email" id="email_address" class="input-medium" placeholder="Your email address" name="email_address" required />
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Save" disabled />
-                    </form>
+                        <input type="submit" class="btn disabled" value="Save" />
+                        <span class="help-block">Don't worry, I hate spam too! You can <?php echo anchor('mailing-list/unsubscribe', 'unsubscribe', array('title'=>'Leave an epicmail mailing list')); ?>
+                         at any time, no hassle.</span>
+                    <?php echo form_close() . PHP_EOL; ?>
                 </div>
 
                 <img src="<?php echo base_url(); ?>assets/imgs/alamo-ranch.png" alt="Northwest San Antonio: Alamo Ranch" title="Northwest San Antonio: Alamo Ranch" class="img-polaroid" width="560" height="269" />

@@ -38,7 +38,6 @@ h1 span {
     border: 1px solid #CCC;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 0;
-    font-size: 14px;
     margin: 30px 0 0;
     padding: 4px 4px 8px;
     text-align: center;
@@ -53,4 +52,14 @@ h1 span {
 
 form {
     margin: 10px 0 0;
+}
+
+form .btn {
+    margin-bottom: 10px;
+}
+
+.help-block {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 0;
 }
