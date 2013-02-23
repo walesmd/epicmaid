@@ -43,16 +43,22 @@
                     will start booking soon and will <em>go fast!</em> If I can get in touch with you, I'll make sure you're sent a 
                     message the instant I start scheduling.</p>
 
-                    <?php echo form_open('promos/coming-soon') . PHP_EOL; ?>
+                    <?php echo form_open('promos/coming_soon') . PHP_EOL; ?>
+
+                    <?php if (validation_errors()): ?>
+                    <ul class="alert alert-error unstyled">
+                        <?php echo validation_errors(); ?>
+                    </ul>
+                    <?php endif; ?>
                         <div class="input-prepend">
                             <span class="add-on"><i class="icon-user"></i></span>
-                            <input type="text" id="name" class="input-medium" placeholder="Your name" name="name" required />
-                        </div>
+                            <input type="text" id="name" class="input-medium" placeholder="* Your name" name="name" value="<?php echo set_value('name'); ?>" />
+                        </div> 
                         <div class="input-prepend">
                             <span class="add-on"><i class="icon-envelope"></i></span>
-                            <input type="email" id="email_address" class="input-medium" placeholder="Your email address" name="email_address" required />
+                            <input type="email" id="email_address" class="input-medium" placeholder="* Your email address" name="email_address" value="<?php echo set_value('email_address'); ?>" required />
                         </div>
-                        <input type="submit" class="btn disabled" value="Save" />
+                        <input type="submit" class="btn btn-primary" value="Save" />
                         <span class="help-block">Don't worry, I hate spam too! You can <?php echo anchor('mailing-list/unsubscribe', 'unsubscribe', array('title'=>'Leave an epicmail mailing list')); ?>
                          at any time, no hassle.</span>
                     <?php echo form_close() . PHP_EOL; ?>
