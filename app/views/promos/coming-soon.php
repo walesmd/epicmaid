@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>San Antonio House &amp; Home Cleaning | Danielle Mendes, Epic Maid</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width" />       
+    <title>San Antonio House Cleaning | Danielle Mendes, Epic Maid</title>
+    <meta name="description" content="House cleaning and maid service in San Antonio has never been so easy! In less than 5 minutes, get an estimate, schedule an appointment and pay for your service online." />
+    <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.no-icons.min.css" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" />
@@ -16,19 +16,17 @@
     <script src="<?php echo base_url(); ?>assets/js/html5shiv-printshiv.js"></script>
 </head>
 <body class="coming-soon">
-    <div class="container content">
-        <p class="pull-right"><i class="icon-phone"></i> 210.453.1298</p>
-
+    <div class="container">
         <div class="row-fluid">
             <header class="span12">
                 <h1><span>epic</span>maid</h1>
-                <p>Danielle Mendes | epicmaid.com</p>
+                <p>Danielle Mendes | <i class="icon-phone"> </i> (210) 123-4568</p>
             </header>
         </div>
 
-        <div class="row-fluid content-body">
+        <div class="row-fluid content">
             <div class="span6">
-                <img src="<?php echo base_url(); ?>assets/imgs/housekeeper.png" alt="Danielle Mendes, Epic Maid" title="Danielle Mendes, Epic Maid" />
+                <img src="<?php echo base_url(); ?>assets/imgs/house-keeper.png" alt="Danielle Mendes, Epic Maid" title="Danielle Mendes, Epic Maid" width="527" height="720" />
             </div>
 
             <div class="span6">
@@ -54,11 +52,11 @@
                             <span class="add-on"><i class="icon-envelope"></i></span>
                             <input type="email" id="email_address" class="input" placeholder="Your email address" name="email_address" required />
                         </div>
-                        <input type="submit" class="btn-small btn-primary" value="Save" disabled />
+                        <input type="submit" class="btn btn-primary" value="Save" disabled />
                     </form>
                 </div>
 
-                <img src="<?php echo base_url(); ?>assets/imgs/alamoranch.png" alt="Northwest San Antonio: Alamo Ranch" title="Northwest San Antonio: Alamo Ranch" class="img-polaroid" />
+                <img src="<?php echo base_url(); ?>assets/imgs/alamo-ranch.png" alt="Northwest San Antonio: Alamo Ranch" title="Northwest San Antonio: Alamo Ranch" class="img-polaroid" width="560" height="269" />
             </div>
         </div>
     </div>
