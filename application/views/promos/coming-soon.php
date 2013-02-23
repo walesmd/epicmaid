@@ -65,5 +65,7 @@
 
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo base_url(); ?>assets/js/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="<?php echo base_url(); ?>assets/js/jquery.placeholder.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/epicmaid.js"></script>
 </body>
 </html>
