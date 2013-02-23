@@ -10,8 +10,6 @@ class Promos extends CI_Controller {
 	  * Focuses on Alamo Ranch and tries to get Email Address
     **/
 	public function coming_soon() {
-		$this->output->enable_profiler(TRUE);
-
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<li>', '</li>');
 
