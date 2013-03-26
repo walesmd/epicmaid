@@ -3,7 +3,7 @@
 class Promos extends CI_Controller {
 
 	public function index() {
-
+		$this->coming_soon();
 	}
 
 	/**	Initial launch page to garner interest
