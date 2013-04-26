@@ -1,6 +1,10 @@
 body {
+    color: #333;
     padding: 8px;
     font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
 }
 
 header {
@@ -14,7 +18,6 @@ h1 {
     font-size: 58px;
     font-weight: normal;
     line-height: 54px;
-    text-rendering: optimizeLegibility;
 }
 
 h1 span {
@@ -25,41 +28,10 @@ h1 span {
     color: #BF2F38;
     font-size: 16px;
     font-style: italic;
-    text-rendering: optimizeLegibility;
+    font-weight: 700;
     text-shadow: -0 -1px 0 rgba(0, 0, 0, .15);
 }
 
-.container em {
-    font-weight: bold;
-}
-
-.next-neighborhood {
-    background-color: #F5F5F5;
-    border: 1px solid #CCC;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 0;
-    margin: 30px 0 0;
-    padding: 4px 4px 8px;
-    text-align: center;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.label-info {
-    background-color: #0D639E;
-}
-
 form {
-    margin: 10px 0 0;
-}
-
-form .btn {
-    margin-bottom: 10px;
-}
-
-.help-block {
-    color: #999;
-    font-style: italic;
-    margin-bottom: 0;
+    margin: 0;
 }
