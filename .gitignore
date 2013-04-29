@@ -1,2 +1,1 @@
-app/logs/*.php
-*.old
+vendor/
