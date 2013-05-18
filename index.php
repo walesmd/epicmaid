@@ -47,29 +47,23 @@
         </article>
 
 
-        <form method="post" action="process" accept-charset="utf-8">
+        <form method="post" action="#process" accept-charset="utf-8">
             <h2><a name="contact"></a>Contact Danielle</h2>
-            <p class="no-tablet"><label for="first_name">Full Name:</label>
-                <input type="text" id="full_name" name="full_name" inputmode="latin-name" placeholder="John Doe" pattern"\w+ \w+.*" required>
-                <span class="required">Required</span>
-            </p>
-
             <div class="group">
-                <p class="no-mobile"><label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name" inputmode="latin-name" placeholder="Doe" required>
-                    <span class="required">Required</span>
+                <p><label for="your_name">Your Name:</label>
+                    <input type="text" id="your_name" name="your_name" inputmode="latin-name" placeholder="John Doe" required>
+                    <span class="required" data-field="your_name">Required</span>
                 </p>
 
-                <p class="no-mobile"><label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name" inputmode="latin-name" placeholder="Doe" required>
-                    <span class="required">Required</span>
-                </p>
+               <p><label for="email_address">Email Address:</label>
+                   <input type="email" id="email_address" name="email_address" placeholder="johndoe@epicmaid.com" required>
+                   <span class="required" data-field="email_address">Required</span>
+               </p>
             </div>
 
             <div class="group">
-                <p><label for="email_address">Email Address:</label>
-                    <input type="email" id="email_address" name="email_address" placeholder="johndoe@epicmaid.com" required>
-                    <span class="required">Required</span>
+                <p><label for="phone_number">Phone Number:</label>
+                    <input type="tel" id="phone_num" name="phone_num" placeholder="(210) 123-4567" pattern="(\d{3}) \d{3}[\-]\d{4}">
                 </p>
 
                 <p><label for="street_address">Street Address and Zip:</label>
@@ -78,10 +72,7 @@
             </div>
 
             <div class="group">
-                <p><label for="phone_number">Phone Number:</label>
-                    <input type="tel" id="phone_num" name="phone_num" placeholder="(210) 123-4567" pattern="(\d{3}) \d{3}[\-]\d{4}">
-
-                    <label for="comments">Questions or Comments:</label>
+                <p><label for="comments">Questions or Comments:</label>
                     <textarea id="comments" name="comments" placeholder="Extra details you'd like to share"></textarea>
                 </p>
 
