@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (isset($_POST)) require('form_handler.php'); ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -50,9 +50,9 @@
         <form method="post" action="#process" accept-charset="utf-8">
             <h2><a name="contact"></a>Contact Danielle</h2>
             <div class="group">
-                <p><label for="your_name">Your Name:</label>
-                    <input type="text" id="your_name" name="your_name" inputmode="latin-name" placeholder="John Doe" required>
-                    <span class="required" data-field="your_name">Required</span>
+                <p><label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" inputmode="latin-name" placeholder="John Doe" required>
+                    <span class="required" data-field="name">Required</span>
                 </p>
 
                <p><label for="email_address">Email Address:</label>
@@ -63,7 +63,7 @@
 
             <div class="group">
                 <p><label for="phone_number">Phone Number:</label>
-                    <input type="tel" id="phone_num" name="phone_num" placeholder="(210) 123-4567" pattern="(\d{3}) \d{3}[\-]\d{4}">
+                    <input type="tel" id="phone_num" name="phone_num" placeholder="(210) 123-4567">
                 </p>
 
                 <p><label for="street_address">Street Address and Zip:</label>
