@@ -30,7 +30,7 @@ a:hover, a:active {
 body {
     clear: both;
     color: #333;
-    font: 88%/1.575 'Lato', sans-serif;
+    font: 106%/1.575 'Lato', sans-serif;
     margin: 0 auto 1.2em;
     max-width: 75em;
     position: relative;
@@ -46,6 +46,11 @@ header {
     font-style: normal;
     padding:0.56em 0 1.0em;
     text-align: center;
+    -webkit-transform: all 0.3s ease-out;
+       -moz-transform: all 0.3s ease-out;
+         -o-transform: all 0.3s ease-out;
+        -ms-transform: all 0.3s ease-out;
+            transform: all 0.3s ease-out;
 }
 
 header a:link, header a:visited,
@@ -126,7 +131,6 @@ form p {
 }
 
 label {
-    display: block;
     line-height: 1.57em;
 }
 
@@ -145,41 +149,37 @@ input {
 .required {
     background-color: #ECF0F1;
     color: #3498DB;
-    bottom: 2.75em;
-    right: 0.35em;
     float: right;
     font-size: 0.8em;
+    left: -0.35em;
     padding: 0.25em 0.35em;
     position: relative;
-    text-align: right;
     text-transform: uppercase;
-    -webkit-text-stroke: 0;
+    top: 2.5em;
+    text-stroke: 0;
 }
 
-.required.result {
-    background-color: #FFF;
-    bottom: 2.25em;
-    font-size: 1em;
-    right: 0.2em;
+.error .required {
+    background-color: #C0392B;
+    color: #FFF;
 }
 
-.required.valid { color: #16A085; }
-
-.required.error { color: #C0392B;}
-
-
-#phone_num { margin-bottom: 2em; }
+.error input {
+    background-color: #f2dede;
+    border-color: #C0392B;
+    color: #C0392B;
+}
 
 textarea {
     height: 4.71em;
     line-height: 1.57em;
-    overflow: auto;
+
     width: 100%;
     -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
 }
 
 button {
@@ -209,7 +209,7 @@ button {
     .group {
         clear: both;
         padding: 0;
-        margin: 0;
+        margin: 0 0 1em 0;
     }
 
     .group:before,
@@ -228,8 +228,6 @@ button {
         margin: 0 0 0 4%;
         width: 48%;
     }
-
-    body { font-size: 1em; }
 
     header {
         background-color: #FFF;
@@ -256,24 +254,24 @@ button {
     }
 
     figure {
+        display: inline;
         float: left;
-        margin: 1% 0;
-        width: 35%;
+        margin: 1% 0 0 2.5%;
+        width: 25%;
     }
 
-    figure img {
+    img {
         text-align: center;
         width: 100%;
     }
 
     main {
-        float: left;
-        margin: 1% 0 1% 1.6%;
-        width: 63.4%;
+        float: right;
+        margin: 1% 2.5% 1% 0;
+        width: 65%;
     }
 
     textarea {
-        height: 17.5em;
+        height: 13em;
     }
-
 }

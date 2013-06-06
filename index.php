@@ -1,4 +1,4 @@
-<?php if (isset($_POST)) require('form_handler.php'); ?><!DOCTYPE html>
+<?php session_start(); require('form_handler.php'); ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -33,32 +33,41 @@
 
     <nav class="no-tablet"><a href="#contact" title="Skip down to contact Danielle"><i class="icon-envelope-alt"> </i> Contact Danielle</a></nav>
     <figure class="no-mobile">
-        <img src="assets/imgs/house-keeper.png" alt="Epic Maid: Danielle Mendes">
+        <img src="assets/imgs/house-keeper.png" width="527" alt="Epic Maid: Danielle Mendes">
     </figure>
 
     <main>
         <article>
             <h2>About Danielle</h2>
-            <p>For more than six years I have provided affordable cleaning services for the best clients in San Antonio. Before that? US Marine. Cleaning up someone else's mess is pretty much my specialty!</p>
+            <p>For more than six years I have provided affordable cleaning services for the best clients in
+                San Antonio. Before that? I was a U.S. Marine - cleaning up
+                someone else's mess is what I do! If you had a few extra hours each week, what would you do? A long overdue date night or
+                maybe ice cream cones after baseball practice?</p>
 
-            <p>Imagine what you could do with just a few extra hours per week. A long overdue date night or maybe ice cream cones after baseball practice? Quality time to make memories that will far outlast the freshly vacuumed carpets and spotless kitchen waiting back at home.</p>
-
-            <p>I would love to call you my client, an honor I take very seriously as my multiple 5+ year clients can attest to (rarely seen within this industry). If you're interested in a veteran-owned, veteran-operated, trustworthy and quality service please use the contact form below.</p>
+            <p>How often do you think, "if I only had a little more time"? Take advantage of this opportunity
+                while you can! I've been fortunate to call some of your neighbors "client" for years now, something
+                rarely seen within this industry. It's not often they're
+                I would love to call you my client, an honor I take very seriously as my multiple 5+ year
+                clients can attest to (rarely seen within this industry). If you're interested in a
+                veteran-owned, veteran-operated, trustworthy and quality service please use the contact
+                form below.</p>
         </article>
 
-
-        <form method="post" action="#process" accept-charset="utf-8">
+    <?php if (isset($valid_form) && $valid_form === true): ?>
+        <p class="success">Thank you! I'll be sure to get in touch with you as soon as possible.</p>
+    <?php else: ?>
+    <form method="post" action="#process" accept-charset="utf-8">
             <h2><a name="contact"></a>Contact Danielle</h2>
             <div class="group">
-                <p><label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" inputmode="latin-name" placeholder="John Doe" required>
+                <p<?php if (in_array('name', $form_errors)) echo ' class="error"'; ?>><label for="name">Your Name:</label>
                     <span class="required" data-field="name">Required</span>
+                    <input type="text" id="name" name="name" inputmode="latin-name" placeholder="John Doe" required>
                 </p>
 
-               <p><label for="email_address">Email Address:</label>
-                   <input type="email" id="email_address" name="email_address" placeholder="johndoe@epicmaid.com" required>
-                   <span class="required" data-field="email_address">Required</span>
-               </p>
+                <p<?php if (in_array('email_address', $form_errors)) echo ' class="error"'; ?>><label for="email_address">Email Address:</label>
+                    <span class="required" data-field="email_address">Required</span>
+                    <input type="text" id="email_address" name="email_address" placeholder="johndoe@epicmaid.com" required>
+                </p>
             </div>
 
             <div class="group">
@@ -76,15 +85,20 @@
                     <textarea id="comments" name="comments" placeholder="Extra details you'd like to share"></textarea>
                 </p>
 
-                <p class="no-mobile">
-                    <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=365x310&markers=icon:http://cdn3.iconfinder.com/data/icons/tango-icon-library/48/go-home-32.png|&center=San+Antonio,TX&sensor=false">
+                <p id="map" class="no-mobile">
+                    <img width="397" src="https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=397x250&center=San+Antonio,TX&sensor=false">
                 </p>
-
-
             </div>
 
             <button type="submit"><i class="icon-envelope-alt"> </i> Send Message</button>
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['epicmaid_csrf_token']; ?>">
         </form>
+    <?php endif; ?>
+
+        <?php if (isset($clean_data)): ?>
+        <pre><?php var_dump($clean_data); ?></pre>
+        <pre><?php var_dump($_POST); ?></pre>
+        <?php endif; ?>
     </main>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
